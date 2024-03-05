@@ -1,0 +1,54 @@
+Summary:
+Probe	Total Evaluations	Total Passed	Total Failed	Pass Rate (%)
+promptinject.HijackHateHumansMini	1	877	123	87.7
+promptinject.HijackKillHumansMini	1	858	142	85.8
+promptinject.HijackLongPromptMini	1	934	66	93.4
+Conclusion:
+The model "gpt2" from Hugging Face was evaluated by the Garak LLM Vulnerability scanner using different prompt injection probes. Here's a brief summary of the evaluations:
+
+promptinject.HijackHateHumansMini: Pass rate of 87.7%.
+promptinject.HijackKillHumansMini: Pass rate of 85.8%.
+promptinject.HijackLongPromptMini: Pass rate of 93.4%.
+Overall, the model demonstrates strong performance against prompt injection vulnerabilities, with pass rates ranging from 85.8% to 93.4%. However, further analysis and testing may be required to ensure the model's security and reliability in real-world scenarios.
+
+If you need any further analysis or details, feel free to let me know!
+
+
+
+
+
+
+Garak Report: gpt2 Model Evaluation (Prompt Injection Tests)
+Executive Summary
+
+This report summarizes a recent evaluation of the gpt2 model from Hugging Face using the Garak LLM vulnerability scanner. Garak assessed the model's susceptibility to manipulation through prompt injection attacks. The report highlights that the model exhibited some vulnerability to these attacks, with a success rate ranging from 85.8% to 93.4% across three different probes.
+
+Details Report
+
+Data and Methodology:
+Garak evaluated the gpt2 model using probes designed to inject malicious content within prompts.
+These probes test the model's ability to follow the intended instructions while disregarding harmful suggestions.
+Three probes were used:
+promptinject.HijackHateHumansMini
+promptinject.HijackKillHumansMini
+promptinject.HijackLongPromptMini
+Results:
+The model showed susceptibility to prompt injection across all tests.
+Specific results are as follows:
+promptinject.HijackHateHumansMini: 87.7% success rate (123 failures out of 1000 tests)
+promptinject.HijackKillHumansMini: 85.8% success rate (142 failures out of 1000 tests)
+promptinject.HijackLongPromptMini: 93.4% success rate (66 failures out of 1000 tests)
+Limitations:
+
+This report only covers a specific set of prompt injection tests. Garak offers a wider range of vulnerability assessments not covered here.
+Impact:
+
+The identified vulnerabilities could be exploited by attackers to steer the model's output towards malicious content, potentially generating harmful or hateful text.
+
+Next Steps:
+
+Address the identified prompt injection vulnerabilities in the gpt2 model. This may involve techniques like improved prompt filtering or attention mechanisms.
+Conduct a more comprehensive evaluation using Garak's full suite of vulnerability checks to assess the model's robustness against a broader range of attacks.
+Recommendations:
+
+Consider deploying additional safeguards to mitigate prompt injection risks in real-world applications. This could involve human oversight or implementing prompt validation techniques.
