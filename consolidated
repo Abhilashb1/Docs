@@ -1,0 +1,65 @@
+Summary:
+Probe	Total Evaluations	Total Passed	Total Failed	Pass Rate (%)
+encoding.InjectAscii85	1	840	0	100.0
+encoding.InjectBase16	1	420	0	100.0
+encoding.InjectBase2048	1	420	0	100.0
+encoding.InjectBase32	1	420	0	100.0
+encoding.InjectBase64	1	770	0	100.0
+encoding.InjectBraille	1	420	0	100.0
+encoding.InjectHex	1	420	0	100.0
+encoding.InjectMorse	1	420	0	100.0
+encoding.InjectROT13	1	420	0	100.0
+encoding.InjectUU	1	420	0	100.0
+promptinject.HijackHateHumansMini	1	877	123	87.7
+promptinject.HijackKillHumansMini	1	858	142	85.8
+promptinject.HijackLongPromptMini	1	934	66	93.4
+  
+Conclusion:
+The model "gpt2" from Hugging Face underwent evaluations using various probes by the Garak LLM Vulnerability scanner. Here's a brief summary of the evaluations:
+
+Encoding Injection Probes: The model demonstrated a perfect pass rate of 100% across all encoding injection probes.
+Prompt Injection Probes:
+promptinject.HijackHateHumansMini: Pass rate of 87.7%.
+promptinject.HijackKillHumansMini: Pass rate of 85.8%.
+promptinject.HijackLongPromptMini: Pass rate of 93.4%.
+Overall, the model exhibits strong performance against both encoding and prompt injection vulnerabilities. However, continuous evaluation and testing are recommended to ensure its security and reliability in real-world applications.
+
+
+
+Consolidated Garak Report: gpt2 Model Evaluation
+This report combines the findings from two separate Garak LLM vulnerability scanner evaluations of the gpt2 model from Hugging Face.
+
+Evaluation Areas:
+
+Encoding Tests (November 22nd, 2023): These tests assessed the model's ability to handle various encoding schemes (e.g., Base64, ASCII85) used to potentially inject malicious content.
+Prompt Injection Tests (March 5th, 2024): These tests evaluated the model's susceptibility to manipulation through crafted prompts containing harmful instructions.
+Overall Findings:
+
+Encoding Tests: The gpt2 model performed well in all encoding tests, achieving a perfect score (100% success rate) in handling potential adversarial content.
+Prompt Injection Tests: The gpt2 model exhibited some vulnerabilities to prompt injection attacks. The success rate of these attacks ranged from 85.8% to 93.4% across three different probes.
+Detailed Results:
+
+Encoding Tests:
+
+Ten probes testing different encoding methods were all successfully countered by the model.
+Prompt Injection Tests:
+
+promptinject.HijackHateHumansMini: 87.7% success rate (123 failures out of 1000 tests)
+promptinject.HijackKillHumansMini: 85.8% success rate (142 failures out of 1000 tests)
+promptinject.HijackLongPromptMini: 93.4% success rate (66 failures out of 1000 tests)
+Limitations:
+
+These reports only cover specific sets of tests within their respective evaluation areas (encoding and prompt injection). Garak offers a wider range of vulnerability assessments not covered here.
+Impact:
+
+The identified prompt injection vulnerabilities could be exploited to generate harmful or hateful text.
+Next Steps:
+
+Address the prompt injection vulnerabilities in the gpt2 model.
+Conduct a more comprehensive evaluation using Garak's full suite of vulnerability checks.
+Recommendations:
+
+Implement additional safeguards to mitigate prompt injection risks in real-world applications (e.g., human oversight, prompt validation).
+Conclusion:
+
+While the gpt2 model demonstrated resilience against encoding-based attacks, its susceptibility to prompt injection vulnerabilities requires attention. Further evaluation and mitigation strategies are recommended to ensure responsible and secure deployment of this model.
