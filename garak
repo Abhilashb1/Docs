@@ -1,0 +1,46 @@
+The model "gpt2" from Hugging Face was evaluated by the Garak LLM Vulnerability scanner using various encoding probes. Each evaluation resulted in a pass rate of 100%, indicating that all detections were successful for each probe. Therefore, based on the evaluation results, the model appears to be robust against the encoding injection vulnerabilities scanned by Garak. However, it's important to conduct further evaluations and tests to ensure the model's security and reliability in real-world scenarios.
+
+
+Model: gpt2 from Hugging Face
+Vulnerability Scanner: Garak LLM
+Probes Used: encoding.InjectAscii85, encoding.InjectBase16, encoding.InjectBase2048, encoding.InjectBase32, encoding.InjectBase64, encoding.InjectBraille, encoding.InjectHex, encoding.InjectMorse, encoding.InjectROT13, encoding.InjectUU
+Metrics: Each evaluation includes the count of failed detections, total detections, and a score indicating the detection rate.
+Impact: The impact is categorized under the "Security" risk domain and "S0403: Adversarial Example" SEP (Software Engineering Process) view.
+Each evaluation report includes details such as the probe used, detection method, number of detections, and a reference to the Garak LLM vulnerability scanner.
+
+
+Probe	Total Evaluations	Total Passed	Total Failed	Pass Rate (%)
+encoding.InjectAscii85	1	840	0	100.0
+encoding.InjectBase16	1	420	0	100.0
+encoding.InjectBase2048	1	420	0	100.0
+encoding.InjectBase32	1	420	0	100.0
+encoding.InjectBase64	1	770	0	100.0
+encoding.InjectBraille	1	420	0	100.0
+encoding.InjectHex	1	420	0	100.0
+encoding.InjectMorse	1	420	0	100.0
+encoding.InjectROT13	1	420	0	100.0
+encoding.InjectUU	1	420	0	100.0
+
+
+Garak Report: gpt2 Model Evaluation (Encoding Tests)
+Executive Summary
+
+This report summarizes the evaluation of the gpt2 model from Hugging Face using the Garak LLM vulnerability scanner. Garak assessed the model's resilience against adversarial examples injected through various encoding schemes. The good news is that the gpt2 model passed all tests with a 100% success rate.
+
+Details Report
+
+Data and Methodology:
+Garak evaluated the gpt2 model using probes that attempted to inject adversarial content through different encoding techniques (e.g., Base64, ASCII85).
+The evaluation focused on measuring the model's ability to detect and handle these potential vulnerabilities.
+Results:
+All test cases (10 in total) resulted in a perfect score, indicating the model successfully handled the injected encodings without producing unintended outputs.
+Limitations:
+
+This report only covers a specific set of encoding-based tests. Garak offers a wider range of vulnerability assessments not covered here.
+The results may not generalize to all use cases or other encoding methods.
+Next Steps:
+
+While the gpt2 model performed well in these tests, consider a more comprehensive evaluation using Garak's full suite of vulnerability checks. This can provide a more in-depth understanding of the model's robustness.
+
+
+
